@@ -1,0 +1,33 @@
+<h1>Users</h1>
+<table border="1" cellpadding="10">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+  </tr>
+  {{#each users}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.mobile}}</td>
+    </tr>
+  {{/each}}
+</table>
+
+<br><br>
+
+<h1>Tasks</h1>
+<table border="1" cellpadding="10">
+  <tr>
+    <th>Task Name</th>
+    <th>Status</th>
+    <th>Assigned User</th>
+  </tr>
+  {{#each tasks}}
+    <tr>
+      <td>{{this.task_name}}</td>
+      <td>{{this.status}}</td>
+      <td>{{this.user_name}}</td>
+    </tr>
+  {{/each}}
+</table>

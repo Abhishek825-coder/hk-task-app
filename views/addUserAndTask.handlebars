@@ -1,0 +1,33 @@
+<h1>Add User</h1>
+<form action="/add-user" method="POST">
+  <label>Name:</label>
+  <input type="text" name="name" required />
+  <label>Email:</label>
+  <input type="email" name="email" required />
+  <label>Mobile:</label>
+  <input type="text" name="mobile" required />
+  <button type="submit">Add User</button>
+</form>
+
+<hr/>
+
+<h1>Add Task</h1>
+<form action="/add-task" method="POST">
+  <label>Task Name:</label>
+  <input type="text" name="task_name" required />
+
+  <label>Status:</label>
+  <select name="status">
+    <option value="Pending">Pending</option>
+    <option value="Done">Done</option>
+  </select>
+
+  <label>Assign to User:</label>
+  <select name="user_id">
+    {{#each users}}
+      <option value="{{this.id}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+
+  <button type="submit">Add Task</button>
+</form>
