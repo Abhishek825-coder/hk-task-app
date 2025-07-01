@@ -3,7 +3,7 @@ const knex = require('knex')({
   connection: {
     host: 'localhost',
     user: 'root',
-    password: 'Raj@0001', // ← agar tumne MySQL login me password diya tha, to yahan likho
+    password: 'Raj@0001', 
     database: 'hk_task',
   },
 });
